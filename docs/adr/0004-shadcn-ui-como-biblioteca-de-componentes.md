@@ -1,0 +1,3 @@
+# shadcn/ui como biblioteca de componentes
+
+As telas do protótipo usam shadcn/ui (Radix + Tailwind) e não o Design System gov.br nem MUI ou Mantine. Pesaram três motivos: os primitivos Radix já resolvem foco, teclado e ARIA, o que ajuda na meta WCAG 2.2 AA; os modelos de IA usados pelos monitores (Antigravity/Gemini) conhecem a biblioteca a fundo; e o código dos componentes fica no repositório, o que permite trocar peças isoladas. Mudar cores e fontes é barato, porque isso fica no tema, mas trocar a biblioteca inteira exigiria reescrever a camada visual de todas as telas. Por isso as telas importam componentes apenas de `src/components/ui`, e nenhuma regra de negócio fica dentro de componente visual.
